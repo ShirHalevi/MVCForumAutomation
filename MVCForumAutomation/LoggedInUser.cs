@@ -4,9 +4,16 @@ namespace MVCForumAutomation
 {
     internal class LoggedInUser
     {
-        internal CreateDiscussionPage ClickCreateNewDiscussion()
+        private LoggedInUserShell _shell;
+
+        public LoggedInUser(LoggedInUserShell shell)
         {
-            throw new NotImplementedException();
+            _shell = shell;
+        }
+
+        internal CreateDiscussionPage CreateNewDiscussion()
+        {
+            return _shell.ClickNewDiscussionButton();
         }
     }
 }

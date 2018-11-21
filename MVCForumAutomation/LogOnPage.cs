@@ -32,10 +32,10 @@ namespace MVCForumAutomation
             }
         }
 
-        internal LatestDiscussionsPage ClickLogOnButton()
+        internal LoggedInUserShell ClickLogOnButton()
         {
             _browser.WaitForElement(By.ClassName("submit-holder"), "log on button").Click();
-            return new LatestDiscussionsPage(_browser);
+            return new LoggedInUserShell(_browser);
         }
     }
 }

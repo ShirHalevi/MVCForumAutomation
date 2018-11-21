@@ -70,6 +70,7 @@
     <Compile Include="LandingPage.cs" />
     <Compile Include="LatestPage.cs" />
     <Compile Include="LoggedInUser.cs" />
+    <Compile Include="LoggedInUserShell.cs" />
     <Compile Include="LogOnPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomGenerator.cs" />

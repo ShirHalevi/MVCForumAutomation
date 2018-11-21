@@ -25,7 +25,7 @@ namespace MVCForumAutomation
         public void DiscussionDetailsAreDisplayedAfterCreation()
         {
             LoggedInUser user = Login();
-            CreateDiscussionPage createDiscussionPage = user.ClickCreateNewDiscussion();
+            CreateDiscussionPage createDiscussionPage = user.CreateNewDiscussion();
 
             string title = "Dicussion Title by DummyUserName";
             string category = "Example Category";
@@ -47,8 +47,8 @@ namespace MVCForumAutomation
             LogOnPage logOnPage = LandingPage.ClickLogOn();
             logOnPage.UserName = "Admin";
             logOnPage.Password = "password";
-            logOnPage.ClickLogOnButton();
-            return new LoggedInUser();
+            var loggedInUserShell = logOnPage.ClickLogOnButton();
+            return new LoggedInUser(loggedInUserShell);
         }
     }
 }
