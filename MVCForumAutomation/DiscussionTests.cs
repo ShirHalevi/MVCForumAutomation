@@ -1,12 +1,25 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using TestAutomationEssentials.MSTest;
+using TestAutomationEssentials.Selenium;
 
 namespace MVCForumAutomation
 {
     [TestClass]
-    public class DiscussionTests
+    public class DiscussionTests : TestBase
     {
-        private LandingPage LandingPage { get; set; } = new LandingPage();
+        private LandingPage LandingPage { get; set; }
+
+        protected override void TestInitialize()
+        {
+            // TODO: create the specific browser according to configuration
+            IWebDriver webDriver = new ChromeDriver();
+            Browser browser = new Browser("MVCForum", webDriver, TestExecutionScopesManager);
+            AddCleanupAction(() => browser.Dispose());
+            LandingPage = new LandingPage(browser);
+        }
 
         [TestMethod]
         public void DiscussionDetailsAreDisplayedAfterCreation()
@@ -31,12 +44,11 @@ namespace MVCForumAutomation
 
         private LoggedInUser Login()
         {
-            RegisterPage registerPage = LandingPage.GoToRegisrationPage();
-            registerPage.UserName = "DummyUserName";
-            registerPage.Password = "A123456";
-            registerPage.Email = RandomGenerator.CreateRandomEmail();
-            LoggedInUser user = registerPage.ClickOnRegisterButton();
-            return user;
+            LogOnPage logOnPage = LandingPage.ClickLogOn();
+            logOnPage.UserName = "Admin";
+            logOnPage.Password = "password";
+            logOnPage.ClickLogOnButton();
+            return new LoggedInUser();
         }
     }
 }
