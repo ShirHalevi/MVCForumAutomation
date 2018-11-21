@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using TestAutomationEssentials.Selenium;
 
 namespace MVCForumAutomation
@@ -14,7 +15,8 @@ namespace MVCForumAutomation
 
         internal CreateDiscussionPage ClickNewDiscussionButton()
         {
-            throw new NotImplementedException();
+            _browser.WaitForElement(By.ClassName("createtopicbutton"), "New Discussion").Click();
+            return new CreateDiscussionPage();
         }
     }
 }

@@ -11,11 +11,6 @@ namespace MVCForumAutomation
         public string tag { get; internal set; }
         public string Description { get; internal set; }
 
-        internal object CreateDiscussion()
-        {
-            throw new NotImplementedException();
-        }
-
         internal DiscussionPage ClickCreateDiscussion()
         {
             throw new NotImplementedException();

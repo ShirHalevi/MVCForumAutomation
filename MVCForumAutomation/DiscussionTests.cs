@@ -24,8 +24,8 @@ namespace MVCForumAutomation
         [TestMethod]
         public void DiscussionDetailsAreDisplayedAfterCreation()
         {
-            LoggedInUserShell user = Login();
-            CreateDiscussionPage createDiscussionPage = user.ClickNewDiscussionButton();
+            LoggedInUserShell shell = Login();
+            CreateDiscussionPage createDiscussionPage = shell.ClickNewDiscussionButton();
 
             string title = "Dicussion Title by DummyUserName";
             string category = "Example Category";

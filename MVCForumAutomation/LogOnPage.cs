@@ -34,7 +34,7 @@ namespace MVCForumAutomation
 
         internal LoggedInUserShell ClickLogOnButton()
         {
-            _browser.WaitForElement(By.ClassName("submit-holder"), "log on button").Click();
+            _browser.WaitForElement(By.ClassName("btn-mvc-green"), "log on button").Click();
             return new LoggedInUserShell(_browser);
         }
     }
