@@ -10,7 +10,7 @@ namespace MVCForumAutomation
     [TestClass]
     public class DiscussionTests : TestBase
     {
-        private LandingPage LandingPage { get; set; }
+        private DefaultShell DefaultShell { get; set; }
 
         protected override void TestInitialize()
         {
@@ -18,14 +18,14 @@ namespace MVCForumAutomation
             IWebDriver webDriver = new ChromeDriver();
             Browser browser = new Browser("MVCForum", webDriver, TestExecutionScopesManager);
             AddCleanupAction(() => browser.Dispose());
-            LandingPage = new LandingPage(browser);
+            DefaultShell = new DefaultShell(browser);
         }
 
         [TestMethod]
         public void DiscussionDetailsAreDisplayedAfterCreation()
         {
-            LoggedInUser user = Login();
-            CreateDiscussionPage createDiscussionPage = user.CreateNewDiscussion();
+            LoggedInUserShell user = Login();
+            CreateDiscussionPage createDiscussionPage = user.ClickNewDiscussionButton();
 
             string title = "Dicussion Title by DummyUserName";
             string category = "Example Category";
@@ -42,13 +42,12 @@ namespace MVCForumAutomation
             Assert.AreEqual(description, discussionPage.Description);
         }
 
-        private LoggedInUser Login()
+        private LoggedInUserShell Login()
         {
-            LogOnPage logOnPage = LandingPage.ClickLogOn();
+            LogOnPage logOnPage = DefaultShell.ClickLogOn();
             logOnPage.UserName = "Admin";
             logOnPage.Password = "password";
-            var loggedInUserShell = logOnPage.ClickLogOnButton();
-            return new LoggedInUser(loggedInUserShell);
+            return logOnPage.ClickLogOnButton();
         }
     }
 }

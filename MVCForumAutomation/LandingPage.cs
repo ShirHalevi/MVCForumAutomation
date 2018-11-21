@@ -4,20 +4,15 @@ using TestAutomationEssentials.Selenium;
 
 namespace MVCForumAutomation
 {
-    public class LandingPage
+    public class DefaultShell
     {
         private readonly Browser _browser;
 
-        public LandingPage(Browser browser)
+        public DefaultShell(Browser browser)
         {
             _browser = browser;
             // TODO: move URL to external configuration file
             _browser.NavigateToUrl("http://localhost:9666/");
-        }
-
-        internal RegisterPage GoToRegisrationPage()
-        {
-            throw new NotImplementedException();
         }
 
         internal LogOnPage ClickLogOn()
