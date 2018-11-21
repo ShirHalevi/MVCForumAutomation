@@ -2,9 +2,9 @@
 
 namespace MVCForumAutomation
 {
-    internal class RandomGenerator
+    internal class LoggedInUser
     {
-        internal static string CreateRandomEmail()
+        internal CreateDiscussionPage ClickCreateNewDiscussion()
         {
             throw new NotImplementedException();
         }
