@@ -16,7 +16,7 @@ namespace MVCForumAutomation
         internal CreateDiscussionPage ClickNewDiscussionButton()
         {
             _browser.WaitForElement(By.ClassName("createtopicbutton"), "New Discussion").Click();
-            return new CreateDiscussionPage();
+            return new CreateDiscussionPage(_browser);
         }
     }
 }
