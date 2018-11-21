@@ -50,7 +50,7 @@
   <ItemGroup>
     <Compile Include="CreateDiscussionPage.cs" />
     <Compile Include="DiscussionPage.cs" />
-    <Compile Include="DiscuttionTests.cs" />
+    <Compile Include="DiscussionTests.cs" />
     <Compile Include="LandingPage.cs" />
     <Compile Include="LatestPage.cs" />
     <Compile Include="LoggedInUser.cs" />
