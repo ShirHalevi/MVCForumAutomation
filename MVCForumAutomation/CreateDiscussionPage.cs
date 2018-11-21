@@ -16,7 +16,7 @@ namespace MVCForumAutomation
             throw new NotImplementedException();
         }
 
-        internal object CreateDiscussionButton()
+        internal DiscussionPage ClickCreateDiscussion()
         {
             throw new NotImplementedException();
         }

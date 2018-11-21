@@ -2,9 +2,9 @@
 
 namespace MVCForumAutomation
 {
-    internal class LandingPage
+    public class LandingPage
     {
-        internal static RegisterPage GoToRegisrationPage()
+        internal RegisterPage GoToRegisrationPage()
         {
             throw new NotImplementedException();
         }

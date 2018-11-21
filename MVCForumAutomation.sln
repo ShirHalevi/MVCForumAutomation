@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCForumAutomation", "MVCForumAutomation\MVCForumAutomation.csproj", "{989EB2C9-9F86-4EAC-8266-822E2D93B084}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpExamples", "CSharpExamples\CSharpExamples.csproj", "{69BCE6F8-AE9A-4103-8E7F-0398625E45EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{989EB2C9-9F86-4EAC-8266-822E2D93B084}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{989EB2C9-9F86-4EAC-8266-822E2D93B084}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{989EB2C9-9F86-4EAC-8266-822E2D93B084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69BCE6F8-AE9A-4103-8E7F-0398625E45EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69BCE6F8-AE9A-4103-8E7F-0398625E45EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69BCE6F8-AE9A-4103-8E7F-0398625E45EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69BCE6F8-AE9A-4103-8E7F-0398625E45EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

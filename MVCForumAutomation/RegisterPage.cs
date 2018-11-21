@@ -8,7 +8,7 @@ namespace MVCForumAutomation
         public string Password { get; internal set; }
         public object Email { get; internal set; }
 
-        internal static LatestPage ClickOnRegisterButton()
+        internal LatestPage ClickOnRegisterButton()
         {
             throw new NotImplementedException();
         }
