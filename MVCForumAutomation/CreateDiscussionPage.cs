@@ -32,8 +32,12 @@ namespace MVCForumAutomation
                 SelectElement selectCategory = new SelectElement(selectCategoryElement);
                 selectCategory.SelectByText(value);
             }
-        }   
-        public string Description { get; internal set; }
+        }
+
+        // GIT TEST
+        public string Description {
+            get; internal set;
+        }
 
         internal DiscussionPage ClickCreateDiscussion()
         {
