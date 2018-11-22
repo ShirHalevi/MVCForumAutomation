@@ -35,7 +35,7 @@ namespace MVCForumAutomation
             createDiscussionPage.Category = category;
             createDiscussionPage.Description = description;
 
-            var discussionPage = createDiscussionPage.ClickCreateDiscussion();
+            DiscussionPage discussionPage = createDiscussionPage.ClickCreateDiscussion();
 
             Assert.AreEqual(title, discussionPage.Title);
             Assert.AreEqual(category, discussionPage.Category);

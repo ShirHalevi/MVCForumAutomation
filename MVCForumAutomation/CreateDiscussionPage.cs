@@ -46,9 +46,11 @@ namespace MVCForumAutomation
             }           
         }
 
-        internal DiscussionPage ClickCreateDiscussion()
-        {
-            throw new NotImplementedException();
+        public DiscussionPage ClickCreateDiscussion()
+        {       
+                var createDiscussion = _browser.WaitForElement(By.Id("autoId-CreateDiscussionBtn"), "Create Discussion Button");
+                createDiscussion.Click(); 
+                return new DiscussionPage();
         }
     }
 }
