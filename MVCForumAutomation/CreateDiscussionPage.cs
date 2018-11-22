@@ -35,8 +35,15 @@ namespace MVCForumAutomation
         }
 
         // GIT TEST
-        public string Description {
-            get; internal set;
+        public string Description
+        {
+            get => throw new NotImplementedException();
+            set
+            {
+                var bodyFrame = _browser.GetFrame(By.Id("Content_ifr"), "Body Frame");
+                var body = bodyFrame.WaitForElement(By.Id("tinymce"), "Body of discussion");
+                body.Text = value;
+            }           
         }
 
         internal DiscussionPage ClickCreateDiscussion()
