@@ -50,7 +50,7 @@ namespace MVCForumAutomation
         {       
                 var createDiscussion = _browser.WaitForElement(By.Id("autoId-CreateDiscussionBtn"), "Create Discussion Button");
                 createDiscussion.Click(); 
-                return new DiscussionPage();
+                return new DiscussionPage(_browser);
         }
     }
 }
